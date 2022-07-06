@@ -160,6 +160,18 @@ class Kayit:
             for i in range(0,len(liste2)):
                 liste.append(liste2[i].split("-")[0])
         del liste2[liste.index(y)]
+
+        with open("C:/Users/rahime/Desktop/Bilgiler.txt", "w+", encoding="utf-8") as YeniDosya:
+            for i in liste2:
+                YeniDosya.write(i)
+                print("Kayit Siliniyor...")
+
+                time.sleep(3)
+
+                print("Kayit basariyla silinmistir..")
+            self.menudon()
+
+
         
 
 
@@ -167,11 +179,33 @@ class Kayit:
 
 
     def kayitoku(self):
-        pass
+
+        with open("C:/Users/rahime/DEsktop/Bilgiler.txt", "r", encoding="utf-8") as Dosya:
+            for i in Dosya:
+                print(i)
+            self.menudon()
+
+
     def cikis(self):
-        pass
+        print("Otomasyondan cikiliyor. Tesekkur ederiz..")
+        time.sleep(3)
+        self.dongu=False
+        exit()
+
     def menudon(self):
-        pass
+        while True:
+            x=input("Ana menuye donmek icin 6'ya, cikmak icin lutfen 5'e basiniz:...")
+            if x=="6":
+                print("Ana menuye donduruluyor...")
+                time.sleep(3)
+                self.program()
+                break
+            elif x=="5":
+                self.cikis()
+                break
+            else:
+                print("Lutfen gecerli bir secim yapiniz...")
+
 
 
 
