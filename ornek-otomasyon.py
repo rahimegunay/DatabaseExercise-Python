@@ -134,10 +134,11 @@ class Kayit:
             Id=1
         else:
             with  open("C:/Users/rahime/Desktop/Bilgiler.txt", "r", encoding="utf-8") as Dosya:
-                Id=int(Dosya.readlines()[-1].split("-")[0])+1
-
+                 Id=int(Dosya.readlines()[-1].split("-")[0])+1
+           
+             
         with  open("C:/Users/rahime/Desktop/Bilgiler.txt", "a+", encoding="utf-8") as Dosya:
-            Dosya.write("{} {} {} {} {}\n".format(Id,Ad, Soyad, TC, Yas, Mail))
+            Dosya.write("{} {} {} {} {}\n".format(Id, Ad, Soyad, TC, Yas, Mail))
             print("Veriler Islenmistir..")  
         self.menudon()
 
@@ -205,16 +206,6 @@ class Kayit:
                 break
             else:
                 print("Lutfen gecerli bir secim yapiniz...")
-
-
-
-
-
-
-
-
-
-
 
 
 
