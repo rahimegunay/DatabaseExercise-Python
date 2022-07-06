@@ -159,7 +159,7 @@ class Kayit:
             liste2=Dosya.readlines()
             for i in range(0,len(liste2)):
                 liste.append(liste2[i].split("-")[0])
-        del liste2[liste.index(y)]
+        
 
 
         
